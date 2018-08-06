@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
 
   before_action :set_locale
 
-  rescue_from ActiveRecord::RecordNotFound, with: :not_found?
+  rescue_from ActiveRecord::RecordNotFound, NoMethodError, with: :not_found?
 
   def set_locale
     I18n.locale = params[:locale] || I18n.default_locale
