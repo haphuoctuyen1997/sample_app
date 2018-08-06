@@ -24,6 +24,7 @@ en:
     password_reset:
       subject: "Password reset"
   footer_title: "Ruby on Rails Tutorial"
+  microposts_count: "Microposts( %{count} )"
   by: "Michael Hartl"
   edit_title: "Update your profile"
   save: "Save changes"
