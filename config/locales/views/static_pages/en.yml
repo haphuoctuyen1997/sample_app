@@ -7,6 +7,7 @@ en:
       text_bold: "Ruby on Rails Tutorial"
       text_white_a: "sample application."
       feed: "Micropost Feed"
+      sign_up: "Sign up now!"
     about:
       about_title: "About"
       text_white_about: "The"
