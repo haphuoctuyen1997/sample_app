@@ -6,6 +6,7 @@ en:
       home: "Home"
       help: "Help"
       login: "Login"
+      users: "Users"
     footer:
       news: "News"
       about: "About"
