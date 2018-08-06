@@ -4,7 +4,7 @@ class SessionsController < ApplicationController
   def create
     user = User.find_by email: params[:session][:email].downcase
     if user && user.authenticate(params[:session][:password])
-      remembe_me user
+      remembe_me user, params
       redirect_to user
     else
       flash.now[:danger] = t "users.create.invalid"
@@ -19,7 +19,7 @@ class SessionsController < ApplicationController
 
   private
 
-  def remembe_me user
+  def remembe_me user, params
     log_in user
     params[:session][:remember_me] == "1" ? remember(user) : forget(user)
   end

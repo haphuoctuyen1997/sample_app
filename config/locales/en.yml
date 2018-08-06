@@ -3,6 +3,13 @@ en:
     create:
       title_text: "Welcome to the Sample App!"
       invalid: "Invalid email/password combination"
+      message_update: "Profile updated"
+      message_delete: "User deleted"
+      message_not_delete: "Not User deleted"
+      log_in: "Please log in."
   footer_title: "Ruby on Rails Tutorial"
   by: "Michael Hartl"
+  edit_title: "Update your profile"
+  save: "Save changes"
+  change: "Change"
   

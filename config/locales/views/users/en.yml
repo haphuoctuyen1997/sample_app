@@ -7,3 +7,13 @@ en:
       email: "Email"
       password: "Password"
       password_confirmation: "Confirmation"
+      create: "Create my account"
+    edit:
+      edit_title: "Edit User"
+      username: "Username"
+      email: "Email"
+      password: "Password"
+      confirmation: "password_confirmation"
+  index:
+    title: "All usersss"
+
