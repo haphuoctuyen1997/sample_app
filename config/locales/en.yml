@@ -3,6 +3,26 @@ en:
     create:
       title_text: "Welcome to the Sample App!"
       invalid: "Invalid email/password combination"
+      message_delete: "User deleted"
+      message_not_delete: "Not User deleted"
+      check_email: "Please check your email to activate your account."
+      profile_updated: "Profile updated"
+      log_in: "Please log in."
+      message_create: "Account not activated."
+      message_create_to: "Check your email for the activation link."
+      password_create: "Email sent with password reset instructions"
+      password_not_create: "Email address not found"
+      password_update: "Password has been reset."
+      password_check_expiration: "Password reset has expired."
+      edit_account: "Account activated!"
+      edit_not_account: "Invalid activation link"
+      message: "Account not activated. / Check your email for the activation link. "
+      check_empty: "can't be empty"
+  user_mailer:
+    account_activation:
+      subject: "Account activation"
+    password_reset:
+      subject: "Password reset"
   footer_title: "Ruby on Rails Tutorial"
   by: "Michael Hartl"
   edit_title: "Update your profile"
