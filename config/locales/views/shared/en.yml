@@ -1,0 +1,5 @@
+en:
+  shared:
+    error_messages:
+      error_text: "The form contains"
+      error_count: " %{count} error"

@@ -1,3 +1,6 @@
 en:
+  users:
+    create:
+      title_text: "Welcome to the Sample App!"
   footer_title: "Ruby on Rails Tutorial"
   by: "Michael Hartl"
