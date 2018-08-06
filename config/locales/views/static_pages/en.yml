@@ -1,10 +1,12 @@
 en:
   static_pages:
     home:
-      home_title: "hello world"
+      home_title: "Welcome to the Sample App"
       profile: "good morning "
     about:
-      about_title: "aboutttttt"
+      about_title: "About"
     help:
-      help_title: "helppppppp"
-
+      help_title: "Help"
+    contact:
+      contact_title: "Contact"
+      
