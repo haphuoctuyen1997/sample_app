@@ -2,6 +2,11 @@ en:
   layouts:
     application:
       title: "Ruby on Rails Tutorial Sample Ap"
+    header:
+      home: "Home"
+      help: "Help"
+      login: "Login"
     footer:
       news: "News"
-
+      about: "About"
+      contact: "Contact"

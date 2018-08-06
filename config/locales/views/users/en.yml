@@ -2,3 +2,4 @@ en:
   users:
     new:
       sign_up: "Sign Up"
+      text_white: "This will be a signup page for new users."
