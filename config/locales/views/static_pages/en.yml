@@ -1,0 +1,9 @@
+en:
+  static_pages:
+    home:
+      home_title: "hello world"
+      profile: "good morning "
+    about:
+      about_title: "aboutttttt"
+    help:
+      help_title: "helppppppp"
