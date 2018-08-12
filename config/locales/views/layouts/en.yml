@@ -2,4 +2,6 @@ en:
   layouts:
     application:
       title: "Ruby on Rails Tutorial Sample Ap"
+    footer:
+      news: "News"
 
