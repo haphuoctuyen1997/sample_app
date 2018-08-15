@@ -3,3 +3,7 @@ en:
     new:
       sign_up: "Sign Up"
       text_white: "This will be a signup page for new users."
+      username: "Name"
+      email: "Email"
+      password: "Password"
+      password_confirmation: "Confirmation"
