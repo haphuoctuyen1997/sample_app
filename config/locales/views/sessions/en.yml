@@ -1,0 +1,10 @@
+en:
+  sessions:
+    new:
+      title_log: "Log in"
+      email: "Email"
+      password: "Password"
+      log_in: "Log innn"
+      sign_now: "Sign up now !"
+      new_user: "New user ? "
+      
