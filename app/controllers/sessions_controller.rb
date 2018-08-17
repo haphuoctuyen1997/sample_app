@@ -2,26 +2,25 @@ class SessionsController < ApplicationController
   def new; end
 
   def create
-    return render_login_page if params[:session].blank?
-
     user = User.find_by email: params[:session][:email].downcase
     if user && user.authenticate(params[:session][:password])
-      log_in user
+      remembe_me user
       redirect_to user
     else
-      render_login_page
+      flash.now[:danger] = t "users.create.invalid"
+      render :new
     end
   end
 
   def destroy
-    log_out
+    log_out if logged_in?
     redirect_to root_path
   end
 
   private
 
-  def render_login_page
-    flash.now[:danger] = t "users.create.invalid"
-    render :new
+  def remembe_me user
+    log_in user
+    params[:session][:remember_me] == "1" ? remember(user) : forget(user)
   end
 end

@@ -4,7 +4,7 @@ en:
       title_log: "Log in"
       email: "Email"
       password: "Password"
-      log_in: "Log innn"
+      log_in: "Log in"
       sign_now: "Sign up now !"
       new_user: "New user ? "
-      
+      remember: "Remember me on this computer"
