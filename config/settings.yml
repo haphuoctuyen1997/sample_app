@@ -1,3 +1,5 @@
 max_name: 50
 max_email: 255
 mini_password: 6
+number: "1"
+size: 80

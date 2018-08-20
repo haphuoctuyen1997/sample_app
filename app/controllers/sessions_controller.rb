@@ -2,10 +2,18 @@ class SessionsController < ApplicationController
   def new; end
 
   def create
-    user = User.find_by email: params[:session][:email].downcase
-    if user && user.authenticate(params[:session][:password])
-      remembe_me user
-      redirect_to user
+    session = params[:session]
+    user = User.find_by email: session[:email].downcase
+    if user && user.authenticate(session[:password])
+      if user.activated?
+        remembe_me user, params
+        redirect_back_or user
+      else
+        message  = "Account not activated. "
+        message += "Check your email for the activation link."
+        flash[:warning] = message
+        redirect_to root_path
+      end
     else
       flash.now[:danger] = t "users.create.invalid"
       render :new
@@ -18,9 +26,9 @@ class SessionsController < ApplicationController
   end
 
   private
-
-  def remembe_me user
+  def remembe_me user, params
+    session_me = params[:session][:remember_me]
     log_in user
-    params[:session][:remember_me] == "1" ? remember(user) : forget(user)
+    session_me == Settings.number ? remember(user) : forget(user)
   end
 end
