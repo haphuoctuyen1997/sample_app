@@ -1,5 +1,7 @@
 max_name: 50
 max_email: 255
 mini_password: 6
-number: "1"
-size: 80
+remember_me: "1"
+font_size: 80
+waiting_time: 2
+users_per_page: 10

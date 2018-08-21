@@ -9,8 +9,7 @@ class SessionsController < ApplicationController
         remembe_me user, params
         redirect_back_or user
       else
-        message  = "Account not activated. "
-        message += "Check your email for the activation link."
+        message = t "users.create.message"
         flash[:warning] = message
         redirect_to root_path
       end
@@ -29,6 +28,6 @@ class SessionsController < ApplicationController
   def remembe_me user, params
     session_me = params[:session][:remember_me]
     log_in user
-    session_me == Settings.number ? remember(user) : forget(user)
+    session_me == Settings.remember_me ? remember(user) : forget(user)
   end
 end

@@ -1,11 +1,12 @@
 class UsersController < ApplicationController
-  before_action :logged_in_user, only: [:index, :edit, :update, :destroy]
-  before_action :load_user, only: [:show, :edit, :update, :destroy]
+  before_action :logged_in_user, except: [:show, :new, :create]
+  before_action :load_user, except: [:index, :new, :create]
   before_action :correct_user, only: [:edit, :update]
   before_action :admin_user, only: :destroy
 
   def index
-    @users = User.paginate page: params[:page], per_page: 10
+    @users = User.paginate page: params[:page],
+      per_page: Settings.users_per_page
   end
 
   def show; end
@@ -18,7 +19,7 @@ class UsersController < ApplicationController
     @user = User.new user_params
     if @user.save
       UserMailer.account_activation(@user).deliver_now
-      flash[:info] = "Please check your email to activate your account."
+      flash[:info] = t "users.create.check_email"
       redirect_to root_path
     else
       render :new
@@ -29,7 +30,7 @@ class UsersController < ApplicationController
 
   def update
     if @user.update_attributes user_params
-      flash[:success] = "Profile updated"
+      flash[:success] = t "users.create.profile_updated"
       redirect_to @user
     else
       render :edit
@@ -46,24 +47,23 @@ class UsersController < ApplicationController
   end
 
   private
+  def load_user
+    @user = User.find params[:id]
+  end
+
   def user_params
     params.require(:user).permit(:name, :email, :password,
       :password_confirmation)
   end
 
-  def load_user
-    @user = User.find params[:id]
-  end
-
   def logged_in_user
     return if logged_in?
     store_location
-    flash[:danger] = "Please log in."
+    flash[:danger] = t "users.create.log_in"
     redirect_to login_path
   end
 
   def correct_user
-    @user = User.find(params[:id])
     redirect_to(root_path) unless current_user?(@user)
   end
 
