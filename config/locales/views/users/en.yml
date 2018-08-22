@@ -14,6 +14,8 @@ en:
       email: "Email"
       password: "Password"
       confirmation: "password_confirmation"
+    show:
+      microposts_count: "Microposts( %{count} )"
   index:
     title: "All usersss"
   delete: "Delete"

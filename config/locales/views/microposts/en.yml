@@ -1,0 +1,8 @@
+en:
+  microposts:
+    create:
+      micropost_cre: "Micropost created!"
+    micropost:
+      confirm_del: "You sure?"
+    destroy:
+      micropost_del: "Micropost deleted"

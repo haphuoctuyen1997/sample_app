@@ -6,6 +6,7 @@ en:
       text_white: "This is the home page for the"
       text_bold: "Ruby on Rails Tutorial"
       text_white_a: "sample application."
+      feed: "Micropost Feed"
     about:
       about_title: "About"
       text_white_about: "The"

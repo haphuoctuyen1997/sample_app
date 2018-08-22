@@ -14,6 +14,8 @@ class User < ApplicationRecord
   validates :password, presence: true,
     length: {minimum: Settings.mini_password},
     allow_nil: true
+
+  has_many :microposts, dependent: :destroy
   has_secure_password
 
   def self.digest string
@@ -64,6 +66,10 @@ class User < ApplicationRecord
 
   def password_reset_expired?
     reset_sent_at < Settings.waiting_time.hours.ago
+  end
+
+  def feed
+    Micropost.feed_user_id id
   end
 
   private
