@@ -18,12 +18,16 @@ en:
       edit_not_account: "Invalid activation link"
       message: "Account not activated. / Check your email for the activation link. "
       check_empty: "can't be empty"
+      following: "Following"
+      followers: "Followers"
   user_mailer:
     account_activation:
       subject: "Account activation"
     password_reset:
       subject: "Password reset"
   footer_title: "Ruby on Rails Tutorial"
+  micropost:
+    picture_error: "should be less than 5MB"
   microposts_count: "Microposts( %{count} )"
   by: "Michael Hartl"
   edit_title: "Update your profile"
